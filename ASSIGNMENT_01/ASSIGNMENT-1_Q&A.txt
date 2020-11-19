@@ -1,0 +1,173 @@
+Q1.What are Channels and Kernels (according to EVA)?
+
+Kernel is also called as filter or feature extractor .
+We can think kernel as weight matrix which is initialized randomly and later the values are learned through neural network
+training .Kernel can be of size (1X1) or (3X3) or 5X5 most of the time .
+To extract features from an given image kernel does a point wise multiplication with given image and does stride to cover 
+whole image .
+Channels :
+Channels means collection of specific set of information .
+An image consists of RGB or CMYK or LAB channels . English language constitutes off 26 channels .
+In term of convolution we can think channel is feature map i.e the  set of feature extracted by a single kernel.
+Output of a filter after convolution is a channel .
+
+Q2.Why should we (nearly) always use 3x3 kernels?
+
+Due to following reasons 
+a. Any major complex filters like 5X5 , 7X7 ,9X9 ,11X11...can be constituted from 3X3 putting in sequence with less 
+   number of parameter .
+   5X5 image (3X3 filter) -> 3X3 (3X3 filter) ->(1X1)
+   5X5 image (5X5 filter) ->(1X1)
+   So two 3X3 filter has same receptive field as one 5X5 with less parameter
+b.3X3 filter has axis of symmetry so for a given point both left and right of that point can be captured 
+c.3X3 filter can capture complex edges as compare to 2X2  filter .
+  4X4 filter will not have axis of symmetry 
+  5X5 filter will have more parameter 
+ So 3X3 is the ideal choice .
+d. NVDIA has accelerated 3X3 filter for better performance .
+
+Q3.How many times to we need to perform 3x3 convolutions operations to reach close
+ to 1x1 from 199x199 (type each layer output like 199x199 > 197x197...)
+
+Ans :99
+
+Iteration  1 ---> 199 X 199  > 3X3 filter > 197 X 197
+Iteration  2 ---> 197 X 197  > 3X3 filter > 195 X 195
+Iteration  3 ---> 195 X 195  > 3X3 filter > 193 X 193
+Iteration  4 ---> 193 X 193  > 3X3 filter > 191 X 191
+Iteration  5 ---> 191 X 191  > 3X3 filter > 189 X 189
+Iteration  6 ---> 189 X 189  > 3X3 filter > 187 X 187
+Iteration  7 ---> 187 X 187  > 3X3 filter > 185 X 185
+Iteration  8 ---> 185 X 185  > 3X3 filter > 183 X 183
+Iteration  9 ---> 183 X 183  > 3X3 filter > 181 X 181
+Iteration  10 ---> 181 X 181  > 3X3 filter > 179 X 179
+Iteration  11 ---> 179 X 179  > 3X3 filter > 177 X 177
+Iteration  12 ---> 177 X 177  > 3X3 filter > 175 X 175
+Iteration  13 ---> 175 X 175  > 3X3 filter > 173 X 173
+Iteration  14 ---> 173 X 173  > 3X3 filter > 171 X 171
+Iteration  15 ---> 171 X 171  > 3X3 filter > 169 X 169
+Iteration  16 ---> 169 X 169  > 3X3 filter > 167 X 167
+Iteration  17 ---> 167 X 167  > 3X3 filter > 165 X 165
+Iteration  18 ---> 165 X 165  > 3X3 filter > 163 X 163
+Iteration  19 ---> 163 X 163  > 3X3 filter > 161 X 161
+Iteration  20 ---> 161 X 161  > 3X3 filter > 159 X 159
+Iteration  21 ---> 159 X 159  > 3X3 filter > 157 X 157
+Iteration  22 ---> 157 X 157  > 3X3 filter > 155 X 155
+Iteration  23 ---> 155 X 155  > 3X3 filter > 153 X 153
+Iteration  24 ---> 153 X 153  > 3X3 filter > 151 X 151
+Iteration  25 ---> 151 X 151  > 3X3 filter > 149 X 149
+Iteration  26 ---> 149 X 149  > 3X3 filter > 147 X 147
+Iteration  27 ---> 147 X 147  > 3X3 filter > 145 X 145
+Iteration  28 ---> 145 X 145  > 3X3 filter > 143 X 143
+Iteration  29 ---> 143 X 143  > 3X3 filter > 141 X 141
+Iteration  30 ---> 141 X 141  > 3X3 filter > 139 X 139
+Iteration  31 ---> 139 X 139  > 3X3 filter > 137 X 137
+Iteration  32 ---> 137 X 137  > 3X3 filter > 135 X 135
+Iteration  33 ---> 135 X 135  > 3X3 filter > 133 X 133
+Iteration  34 ---> 133 X 133  > 3X3 filter > 131 X 131
+Iteration  35 ---> 131 X 131  > 3X3 filter > 129 X 129
+Iteration  36 ---> 129 X 129  > 3X3 filter > 127 X 127
+Iteration  37 ---> 127 X 127  > 3X3 filter > 125 X 125
+Iteration  38 ---> 125 X 125  > 3X3 filter > 123 X 123
+Iteration  39 ---> 123 X 123  > 3X3 filter > 121 X 121
+Iteration  40 ---> 121 X 121  > 3X3 filter > 119 X 119
+Iteration  41 ---> 119 X 119  > 3X3 filter > 117 X 117
+Iteration  42 ---> 117 X 117  > 3X3 filter > 115 X 115
+Iteration  43 ---> 115 X 115  > 3X3 filter > 113 X 113
+Iteration  44 ---> 113 X 113  > 3X3 filter > 111 X 111
+Iteration  45 ---> 111 X 111  > 3X3 filter > 109 X 109
+Iteration  46 ---> 109 X 109  > 3X3 filter > 107 X 107
+Iteration  47 ---> 107 X 107  > 3X3 filter > 105 X 105
+Iteration  48 ---> 105 X 105  > 3X3 filter > 103 X 103
+Iteration  49 ---> 103 X 103  > 3X3 filter > 101 X 101
+Iteration  50 ---> 101 X 101  > 3X3 filter > 99 X 99
+Iteration  51 ---> 99 X 99  > 3X3 filter > 97 X 97
+Iteration  52 ---> 97 X 97  > 3X3 filter > 95 X 95
+Iteration  53 ---> 95 X 95  > 3X3 filter > 93 X 93
+Iteration  54 ---> 93 X 93  > 3X3 filter > 91 X 91
+Iteration  55 ---> 91 X 91  > 3X3 filter > 89 X 89
+Iteration  56 ---> 89 X 89  > 3X3 filter > 87 X 87
+Iteration  57 ---> 87 X 87  > 3X3 filter > 85 X 85
+Iteration  58 ---> 85 X 85  > 3X3 filter > 83 X 83
+Iteration  59 ---> 83 X 83  > 3X3 filter > 81 X 81
+Iteration  60 ---> 81 X 81  > 3X3 filter > 79 X 79
+Iteration  61 ---> 79 X 79  > 3X3 filter > 77 X 77
+Iteration  62 ---> 77 X 77  > 3X3 filter > 75 X 75
+Iteration  63 ---> 75 X 75  > 3X3 filter > 73 X 73
+Iteration  64 ---> 73 X 73  > 3X3 filter > 71 X 71
+Iteration  65 ---> 71 X 71  > 3X3 filter > 69 X 69
+Iteration  66 ---> 69 X 69  > 3X3 filter > 67 X 67
+Iteration  67 ---> 67 X 67  > 3X3 filter > 65 X 65
+Iteration  68 ---> 65 X 65  > 3X3 filter > 63 X 63
+Iteration  69 ---> 63 X 63  > 3X3 filter > 61 X 61
+Iteration  70 ---> 61 X 61  > 3X3 filter > 59 X 59
+Iteration  71 ---> 59 X 59  > 3X3 filter > 57 X 57
+Iteration  72 ---> 57 X 57  > 3X3 filter > 55 X 55
+Iteration  73 ---> 55 X 55  > 3X3 filter > 53 X 53
+Iteration  74 ---> 53 X 53  > 3X3 filter > 51 X 51
+Iteration  75 ---> 51 X 51  > 3X3 filter > 49 X 49
+Iteration  76 ---> 49 X 49  > 3X3 filter > 47 X 47
+Iteration  77 ---> 47 X 47  > 3X3 filter > 45 X 45
+Iteration  78 ---> 45 X 45  > 3X3 filter > 43 X 43
+Iteration  79 ---> 43 X 43  > 3X3 filter > 41 X 41
+Iteration  80 ---> 41 X 41  > 3X3 filter > 39 X 39
+Iteration  81 ---> 39 X 39  > 3X3 filter > 37 X 37
+Iteration  82 ---> 37 X 37  > 3X3 filter > 35 X 35
+Iteration  83 ---> 35 X 35  > 3X3 filter > 33 X 33
+Iteration  84 ---> 33 X 33  > 3X3 filter > 31 X 31
+Iteration  85 ---> 31 X 31  > 3X3 filter > 29 X 29
+Iteration  86 ---> 29 X 29  > 3X3 filter > 27 X 27
+Iteration  87 ---> 27 X 27  > 3X3 filter > 25 X 25
+Iteration  88 ---> 25 X 25  > 3X3 filter > 23 X 23
+Iteration  89 ---> 23 X 23  > 3X3 filter > 21 X 21
+Iteration  90 ---> 21 X 21  > 3X3 filter > 19 X 19
+Iteration  91 ---> 19 X 19  > 3X3 filter > 17 X 17
+Iteration  92 ---> 17 X 17  > 3X3 filter > 15 X 15
+Iteration  93 ---> 15 X 15  > 3X3 filter > 13 X 13
+Iteration  94 ---> 13 X 13  > 3X3 filter > 11 X 11
+Iteration  95 ---> 11 X 11  > 3X3 filter > 9 X 9
+Iteration  96 ---> 9 X 9  > 3X3 filter > 7 X 7
+Iteration  97 ---> 7 X 7  > 3X3 filter > 5 X 5
+Iteration  98 ---> 5 X 5  > 3X3 filter > 3 X 3
+Iteration  99 ---> 3 X 3  > 3X3 filter > 1 X 1
+
+Q4.How are kernels initialized? 
+
+Kernels are initialized with random number with small values .
+Problem of initializing with same value :
+ Consider a neural network with two hidden units the weights with some constant .
+ If we forward propagate then hidden layer will give similar  output .
+ Thus, both hidden units will have identical influence on the cost, which will lead to identical gradients. 
+Thus, both neurons will evolve symmetrically throughout training, 
+effectively preventing different neurons from learning different things.
+
+Problems of initializing with large value :
+if initialized with large value then , output will be large , derivative with respect to input will be large 
+ during back propagation by applying chain rule all gradients will be multiplied so resultant gradient will be large 
+W*= w- lr * dl/dw
+so weights are shifted so much for iteration so it will take a long time to converge and causes 
+problem of exploding gradient .
+
+Q5.What happens during the training of a DNN?
+
+For each epoch :
+
+	STEP:1:
+	Forward Propagation :(input is multiplied with weight matrix passed to an activation function which provides non linearity then final output is calculated )
+	
+	input ->weighted sum(W1 weight matrix) ->activation functions ->Input to hidden layer(1)
+	Input to hidden layer(1) ->weighted sum (W2 weight matrix) ->activation functions ->Input to hidden layer(2)
+	....
+	Input to hidden layer(n) ->weighted sum (WN  weight matrix) ->activation functions ->Output layer 
+	
+	STEP 2:
+	Finding Loss :
+	Output is compared with expected output to find loss 
+     
+	STEP 3 :
+	Back  Propagation :(updating weight metrices as per gradient descent )
+	Gradient is calcualted for each weight matrix  using chain rule
+	W1* = w1- lr * dl/dw1
+	W2* = w2- lr * dl/dw2
+	And each weight matrix got updated as per above formula 
+
