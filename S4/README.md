@@ -2,9 +2,15 @@
 
 
 #S4
-MNIST  DATA 
-99.4% validation accuracy
-Less than 20k Parameters
-You can use anything from above you want. 
-Less than 20 Epochs
-No fully connected layer
+
+MNIST  DATA WITH CONSTRAINTS 
+
+1.99.4% validation accuracy
+
+2.Less than 20k Parameters
+
+3.You can use anything from above you want. 
+
+4.Less than 20 Epochs
+
+5.No fully connected layer
