@@ -1,0 +1,351 @@
+MODEL TRY 1 :
+RESULT : PARAMETER :18488
+         MAX ACCURACY :84
+		 PROBLEM MAYBE:input channels at begining at taken 8 
+		                At end Receptive field became 40X40
+class Net(nn.Module):
+    def __init__(self):
+      super(Net, self).__init__()
+
+      self.input_block = nn.Sequential(
+
+          nn.Conv2d(1, 8, 3,padding=1, bias=False), 
+          nn.ReLU(),
+          nn.BatchNorm2d(8),
+          nn.Dropout2d(0.1),
+      )
+      self.conv_block = nn.Sequential(
+          nn.Conv2d(8, 16, 3,padding=1, bias=False),
+          nn.ReLU(),
+          nn.BatchNorm2d(16),
+          nn.Dropout2d(0.1),
+
+
+      nn.Conv2d(16, 32, 3,padding=1, bias=False),
+          nn.ReLU(),
+          nn.BatchNorm2d(32),
+          nn.Dropout2d(0.1),
+      )
+      # translation layer
+      self.trans = nn.Sequential(
+          nn.Conv2d(32, 8, 1, bias=False), 
+          nn.ReLU(),
+          nn.MaxPool2d(2, 2),
+      )
+          
+      self.avg_pool = nn.Sequential(
+
+      nn.Conv2d(32, 10, 1, bias=False),
+      nn.AvgPool2d(7)
+      )
+
+    """forward: performs a forward pass when model(x) is called
+    Params
+        x: the input data
+    Returns
+        y: the output of the model
+    """
+    def forward(self, x):
+        x = self.input_block(x)
+        x = self.conv_block(x)
+        x = self.trans(x)
+        x = self.conv_block(x)
+        x = self.trans(x)
+        x = self.conv_block(x)
+        x = self.avg_pool(x)
+        x = x.view(-1, 10)
+        return F.log_softmax(x)
+		
+		
+		
+		
+		
+		
+MODEL TRY 2 :
+RESULT : PARAMETER :22544
+         MAX ACCURACY :98.75
+		 PROBLEM MAYBE:input channels at begining at taken 8 
+		                At end Receptive field became 40X40
+class Net(nn.Module):
+    def __init__(self):
+      super(Net, self).__init__()
+
+      self.input_block = nn.Sequential(
+
+          nn.Conv2d(1, 16, 3,padding=1, bias=False), 
+          nn.ReLU(),
+          nn.BatchNorm2d(16),
+          nn.Dropout2d(0.1),
+      )
+      self.conv_block = nn.Sequential(
+          nn.Conv2d(16, 16, 3,padding=1, bias=False),
+          nn.ReLU(),
+          nn.BatchNorm2d(16),
+          nn.Dropout2d(0.1),
+
+
+      nn.Conv2d(16, 32, 3,padding=1, bias=False),
+          nn.ReLU(),
+          nn.BatchNorm2d(32),
+          nn.Dropout2d(0.1),
+      )
+      # translation layer
+      self.trans = nn.Sequential(
+          nn.Conv2d(32, 16, 1, bias=False), 
+          nn.ReLU(),
+          nn.MaxPool2d(2, 2),
+      )
+          
+      self.avg_pool = nn.Sequential(
+
+      nn.Conv2d(32, 10, 1, bias=False),
+      nn.AvgPool2d(7)
+      )
+
+    """forward: performs a forward pass when model(x) is called
+    Params
+        x: the input data
+    Returns
+        y: the output of the model
+    """
+    def forward(self, x):
+        x = self.input_block(x)
+        x = self.conv_block(x)
+        x = self.trans(x)
+        x = self.conv_block(x)
+        x = self.trans(x)
+        x = self.conv_block(x)
+        x = self.avg_pool(x)
+        x = x.view(-1, 10)
+        return F.log_softmax(x)
+		
+		
+		
+		
+MODEL TRY 3 :
+RESULT : PARAMETER :22544
+         MAX ACCURACY :98.75
+		 PROBLEM MAYBE:input channels at begining at taken 8 
+		                At end Receptive field became 40X40
+class Net(nn.Module):
+    def __init__(self):
+      super(Net, self).__init__()
+
+      self.input_block = nn.Sequential(
+
+          nn.Conv2d(1, 8, 3,padding=1, bias=False), 
+          nn.ReLU(),
+          nn.BatchNorm2d(8),
+          nn.Dropout2d(0.1),
+      )
+      self.conv_block = nn.Sequential(
+          nn.Conv2d(8, 16, 3,padding=1, bias=False),
+          nn.ReLU(),
+          nn.BatchNorm2d(16),
+          nn.Dropout2d(0.1),
+
+
+      nn.Conv2d(16, 32, 3,padding=1, bias=False),
+          nn.ReLU(),
+          nn.BatchNorm2d(32),
+          nn.Dropout2d(0.1),
+		  
+		nn.Conv2d(32, 64, 3,padding=1, bias=False),
+		nn.ReLU(),
+		nn.BatchNorm2d(64),
+		nn.Dropout2d(0.1),
+      )
+      # translation layer
+      self.trans = nn.Sequential(
+          nn.Conv2d(64, 8, 1, bias=False), 
+          nn.ReLU(),
+          nn.MaxPool2d(2, 2),
+      )
+          
+      self.avg_pool = nn.Sequential(
+
+      nn.Conv2d(64, 10, 1, bias=False),
+      nn.AvgPool2d(7)
+      )
+
+    """forward: performs a forward pass when model(x) is called
+    Params
+        x: the input data
+    Returns
+        y: the output of the model
+    """
+    def forward(self, x):
+        x = self.input_block(x)
+        x = self.conv_block(x)
+        x = self.trans(x)
+        x = self.avg_pool(x)
+        x = x.view(-1, 10)
+        return F.log_softmax(x)
+		
+		
+MODEL TRY 4:
+
+RESULT : PARAMETER :22544
+         MAX ACCURACY :99.3
+		 PROBLEM MAYBE:input channels at begining at taken 16
+		                At end Receptive field became 40X40
+class Net(nn.Module):
+    def __init__(self):
+      super(Net, self).__init__()
+
+      self.input_block = nn.Sequential(
+
+          nn.Conv2d(1, 16, 3, bias=False), 
+          nn.ReLU(),
+          nn.BatchNorm2d(16),
+          nn.Dropout2d(0.1),
+      )
+      self.conv_block = nn.Sequential(
+          nn.Conv2d(16, 16, 3, bias=False),
+          nn.ReLU(),
+          nn.BatchNorm2d(16),
+          nn.Dropout2d(0.1),
+         
+         nn.Conv2d(16, 32, 3, bias=False),
+          nn.ReLU(),
+          nn.BatchNorm2d(32),
+          nn.Dropout2d(0.1),
+
+      )
+      self.conv_block_padding = nn.Sequential(
+        nn.Conv2d(16, 16, 3,padding=1,bias=False),
+        nn.ReLU(),
+        nn.BatchNorm2d(16),
+        nn.Dropout2d(0.1),
+        
+        nn.Conv2d(16, 32, 3,padding=1,bias=False),
+        nn.ReLU(),
+        nn.BatchNorm2d(32),
+        nn.Dropout2d(0.1),
+
+      )
+      # translation layer
+      self.trans = nn.Sequential(
+          nn.Conv2d(32, 16, 1, bias=False), 
+          nn.ReLU(),
+          nn.MaxPool2d(2, 2),
+      )
+          
+      self.avg_pool = nn.Sequential(
+
+      nn.Conv2d(32, 10, 1, bias=False),
+      nn.AvgPool2d(3)
+      )
+
+    """forward: performs a forward pass when model(x) is called
+    Params
+        x: the input data
+    Returns
+        y: the output of the model
+    """
+    def forward(self, x):
+        x = self.input_block(x)
+        x = self.conv_block(x)
+        x = self.trans(x)
+        x = self.conv_block(x)
+        x = self.trans(x)
+        x = self.conv_block_padding(x)
+        x = self.avg_pool(x)
+        x = x.view(-1, 10)
+        return F.log_softmax(x)
+		
+**********************************
+		
+APPROACH  5 :
+PARAMETER :17392
+MAX ACCURACY ACHIEVED :99.49 max 99.4 hit 4 times out of 20 times 
+
+**********************************
+
+class Net(nn.Module):
+    def __init__(self):
+      super(Net, self).__init__()
+
+      self.input_block = nn.Sequential(
+      #INPUT 28X28X1 >>CONV 3X3X1X16 >>26X26X16
+          nn.Conv2d(1, 16, 3, bias=False), 
+          nn.ReLU(),
+          nn.BatchNorm2d(16),
+          nn.Dropout2d(0.1),
+
+ 
+      #INPUT 26X26X16 >>CONV 3X3X16X32 >>24X24X32
+          nn.Conv2d(16, 32, 3, bias=False), 
+          nn.ReLU(),
+          nn.BatchNorm2d(32),
+          nn.Dropout2d(0.1),
+      )
+            # translation layer
+      
+      self.trans1 = nn.Sequential(
+          #24X24x32 >>CONV 1X1X32X8 >>24X24X8
+          nn.Conv2d(32, 8, 1, bias=False), 
+          nn.ReLU(),
+          #24X24x8 >>MAXPOOL (2,2) >>12X12X8
+          nn.MaxPool2d(2, 2),
+      )
+      self.conv_block = nn.Sequential(
+          #12X12x8 >>CONV 3X3X8X16 PAD=1 >>12X12X16
+          nn.Conv2d(8, 16, 3,padding=1, bias=False),
+          nn.ReLU(),
+          nn.BatchNorm2d(16),
+          nn.Dropout2d(0.1),
+
+          #12X12x16 >>CONV 3X3X16X32 >>10X10X32
+
+         nn.Conv2d(16, 32, 3, bias=False),
+          nn.ReLU(),
+          nn.BatchNorm2d(32),
+          nn.Dropout2d(0.1),
+
+      )
+                  # translation layer
+      self.trans2 = nn.Sequential(
+          #10X10x32 >>CONV 1X1X32X8 >>10X10X8
+          nn.Conv2d(32, 8, 1, bias=False), 
+          nn.ReLU(),
+          #10X10x8 >>MAXPOOL (2,2) >>5X5X8
+          nn.MaxPool2d(2, 2),
+      )
+      self.conv_block2 = nn.Sequential(
+        #5X5X8 >>CONV 3X3X8X16 PAD=1 >>5X5X16
+         nn.Conv2d(8, 16, 3,padding=1,bias=False),
+        nn.ReLU(),
+        nn.BatchNorm2d(16),
+        nn.Dropout2d(0.1),  
+        #5X5X16 >>CONV 3X3X8X32 PAD=0 >>3X3X32
+        nn.Conv2d(16, 32, 3,bias=False),
+        nn.ReLU(),
+        nn.BatchNorm2d(32),
+        nn.Dropout2d(0.1),
+
+      )
+
+          
+      self.avg_pool = nn.Sequential(
+      #3X3X32 >>CONV 1X1X32X10  >>3X3X10
+      nn.Conv2d(32, 10, 1, bias=False),
+      #3X3X10 >>AVG pool(3X3) >>1X1X10
+      nn.AvgPool2d(3)
+      )
+
+    """forward: performs a forward pass when model(x) is called
+    Params
+        x: the input data
+    Returns
+        y: the output of the model
+    """
+    def forward(self, x):
+        x = self.input_block(x)
+        x = self.trans1(x)
+        x = self.conv_block(x)
+        x = self.trans2(x)
+        x = self.conv_block2(x)
+        x = self.avg_pool(x)
+        x = x.view(-1, 10)
+        return F.log_softmax(x)
