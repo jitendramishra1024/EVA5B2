@@ -8,7 +8,6 @@
 
 # ATTEMPT01
 
-# OBJECTIVE 
 **Target :**
 Ignore constraint make the model to get the skeleton correct
 Achieve Model accuracy 99.4 at least 1 times in 15 epochs
@@ -24,7 +23,7 @@ Use less than 15 epochs
 **Technique :**
 INPUT SIZE Remark/Operation  OUTPUTSIZE  RF
 28 		#1st conv			  26         3	
-26		#2nd conv   		24         5	
+26		#2nd conv   		  24         5	
 24		#1X1 conv			  24         5	
 24		#maxpool			  12         6	
 12		#3rd conv			  10         10	
@@ -40,8 +39,10 @@ In all attempt we will use the same structure just difference will be channels
 to reduce number of parametrer
 
 **Extra Added :**
-a. Batch Norm 
+Batch Norm 
 
+**Link to the Code **
+https://github.com/jitendramishra1024/EVA5B2/blob/main/S5/ASSIGNMENT_CORRECT_SOLUTION/S5_Drill_01.ipynb
 
 **Result :**
 BEST TRAIN ACCURACY :99.91
@@ -50,9 +51,4 @@ BEST TEST ACCURACY :99.43
 
 **CONCLUSION :**
 1. Still  Model has a lot of parameter 
-2. We need to try Image augmentation with reduced parameter 
-
-#TARGET  ACHIEVED
-
-Link :https://github.com/jitendramishra1024/EVA5B2/blob/main/S5/ASSIGNMENT/S5_Attempt01.ipynb
-
+<a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S5/ASSIGNMENT_CORRECT_SOLUTION/images/DRILL_01_IMG_99.4.png" align="center" height="250" width="250" ></a>
