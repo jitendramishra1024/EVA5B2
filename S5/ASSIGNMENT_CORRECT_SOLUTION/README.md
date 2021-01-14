@@ -56,4 +56,4 @@ BEST TEST ACCURACY :99.43
 
 **LINKS TO CODE :**
 
-<a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S5/ASSIGNMENT_CORRECT_SOLUTION/images/DRILL_01_IMG_99.4.png" align="center" height="500" width="500" ></a>
+<a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S5/ASSIGNMENT_CORRECT_SOLUTION/images/DRILL_01_IMG_99.4.png" align="center" height="500" width="700" ></a>
