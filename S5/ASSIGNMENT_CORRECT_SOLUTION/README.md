@@ -54,6 +54,91 @@ BEST TEST ACCURACY :99.43
 1. Still  Model has a lot of parameter 
 
 
-**LINKS TO CODE :**
+**LOSS AND ACCURACY OF TRAIN AND TEST  :**
 
 <a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S5/ASSIGNMENT_CORRECT_SOLUTION/images/DRILL_01_IMG_99.4.png" align="center" height="500" width="600" ></a>
+
+
+
+# ATTEMPT02
+
+**Target :**
+
+Follow model1 and make it small Achieve Model accuracy 99.4 at least 1 times in 15 epochs
+
+**Constraint :**
+
+Use less than 10 k paramter
+Use less than 15 epochs 
+
+**Parameters used :**
+9862
+
+**Technique :**
+ Technique same as s5_Drill_01.ipynb
+ https://github.com/jitendramishra1024/EVA5B2/blob/main/S5/ASSIGNMENT_CORRECT_SOLUTION/S5_Drill_01.ipynb
+
+
+**Extra Added :**
+None . Just reduced channel size to reduce parameter
+
+**Link to the Code **
+https://github.com/jitendramishra1024/EVA5B2/blob/main/S5/ASSIGNMENT_CORRECT_SOLUTION/S5_Drill_02.ipynb
+
+**Result :**
+BEST TRAIN ACCURACY :99.51
+
+BEST TEST ACCURACY :99.31
+
+**CONCLUSION :**
+
+1. overfitting observed 
+
+
+**LOSS AND ACCURACY OF TRAIN AND TEST  :**
+
+<a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S5/ASSIGNMENT_CORRECT_SOLUTION/images/DRILL_02_IMG_99.3.png" align="center" height="500" width="600" ></a>
+
+
+
+
+# ATTEMPT02
+
+**Target :**
+
+Model accuracy 99.4 at least 5 times in 15 epochs
+
+**Constraint :**
+
+Use less than 10 k paramter
+Use less than 15 epochs 
+
+**Parameters used :**
+9862
+
+**Technique :**
+ Technique same as s5_Drill_01.ipynb
+ https://github.com/jitendramishra1024/EVA5B2/blob/main/S5/ASSIGNMENT_CORRECT_SOLUTION/S5_Drill_01.ipynb
+
+
+**Extra Added :**
+Applied LR scheduler 
+Applied Image Augmentation 
+
+**Link to the Code **
+https://github.com/jitendramishra1024/EVA5B2/blob/main/S5/ASSIGNMENT_CORRECT_SOLUTION/S5_Drill_03.ipynb
+
+**Result :**
+BEST TRAIN ACCURACY :99.32
+
+BEST TEST ACCURACY :99.49
+
+**CONCLUSION :**
+
+1. overfitting observed 
+
+
+**LOSS AND ACCURACY OF TRAIN AND TEST  :**
+
+<a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S5/ASSIGNMENT_CORRECT_SOLUTION/images/DRILL_03_IMG_99.49.png" align="center" height="500" width="600" ></a>
+
