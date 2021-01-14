@@ -102,7 +102,7 @@ BEST TEST ACCURACY :99.31
 
 
 
-# ATTEMPT02
+# ATTEMPT03
 
 **Target :**
 
@@ -122,6 +122,7 @@ Use less than 15 epochs
 
 
 **Extra Added :**
+
 Applied LR scheduler 
 Applied Image Augmentation 
 
@@ -129,6 +130,7 @@ Applied Image Augmentation
 https://github.com/jitendramishra1024/EVA5B2/blob/main/S5/ASSIGNMENT_CORRECT_SOLUTION/S5_Drill_03.ipynb
 
 **Result :**
+
 BEST TRAIN ACCURACY :99.32
 
 BEST TEST ACCURACY :99.49
@@ -142,3 +144,47 @@ BEST TEST ACCURACY :99.49
 
 <a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S5/ASSIGNMENT_CORRECT_SOLUTION/images/DRILL_03_IMG_99.49.png" align="center" height="500" width="600" ></a>
 
+
+
+# ATTEMPT04
+
+**Target :**
+
+Model accuracy 99.4 at least 1 times in 15 epochs with less than 8k parameter
+
+**Constraint :**
+
+Use less than 8 k paramter
+Use less than 15 epochs 
+
+**Parameters used :**
+9862
+
+**Technique :**
+ Technique same as s5_Drill_01.ipynb
+ https://github.com/jitendramishra1024/EVA5B2/blob/main/S5/ASSIGNMENT_CORRECT_SOLUTION/S5_Drill_01.ipynb
+
+
+**Extra Added :**
+
+Same as attempt 03 
+New thing added Tried with different step size in LR step
+in step=10 we are able to get test accuracy 99.49
+
+**Link to the Code **
+https://github.com/jitendramishra1024/EVA5B2/blob/main/S5/ASSIGNMENT_CORRECT_SOLUTION/S5_Drill_04.ipynb
+
+**Result :**
+
+BEST TRAIN ACCURACY :99.35
+
+BEST TEST ACCURACY :99.48 (99.4 more than 6 times out of 15 times)
+
+**CONCLUSION :**
+
+1. overfitting observed 
+
+
+**LOSS AND ACCURACY OF TRAIN AND TEST  :**
+
+<a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S5/ASSIGNMENT_CORRECT_SOLUTION/images/DRILL_04_IMG_99.41_LR_10.png" align="center" height="500" width="600" ></a>
