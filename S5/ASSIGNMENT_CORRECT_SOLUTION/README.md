@@ -18,7 +18,8 @@ Use less than 10 k paramter
 Use less than 15 epochs 
 
 
-**Parameters used :**104762
+**Parameters used :**
+104762
 
 **Technique :**
 INPUT SIZE Remark/Operation  OUTPUTSIZE  RF
@@ -41,7 +42,7 @@ to reduce number of parametrer
 **Extra Added :**
 Batch Norm 
 
-**Link to the Code **
+**Link to the Code**
 https://github.com/jitendramishra1024/EVA5B2/blob/main/S5/ASSIGNMENT_CORRECT_SOLUTION/S5_Drill_01.ipynb
 
 **Result :**
@@ -82,7 +83,7 @@ Use less than 15 epochs
 **Extra Added :**
 None . Just reduced channel size to reduce parameter
 
-**Link to the Code **
+**Link to the Code**
 https://github.com/jitendramishra1024/EVA5B2/blob/main/S5/ASSIGNMENT_CORRECT_SOLUTION/S5_Drill_02.ipynb
 
 **Result :**
@@ -171,7 +172,7 @@ Same as attempt 03
 New thing added Tried with different step size in LR step
 in step=10 we are able to get test accuracy 99.49
 
-**Link to the Code **
+**Link to the Code**
 https://github.com/jitendramishra1024/EVA5B2/blob/main/S5/ASSIGNMENT_CORRECT_SOLUTION/S5_Drill_04.ipynb
 
 **Result :**
