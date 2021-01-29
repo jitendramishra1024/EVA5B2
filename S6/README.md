@@ -34,7 +34,7 @@ draw single image showing 25 misclassified images.
 
 <a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S6/Images/TEST_LOSS_OVER_EPOCH.png" align="center" height="500" width="600" ></a>
 
-**MISCLASSIFIED :**
+**MISCLASSIFIED WITH GBN :**
 
 <a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S6/Images/MISCLASSIFIED.png" align="center" height="500" width="600" ></a>
 
