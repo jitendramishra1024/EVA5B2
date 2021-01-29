@@ -46,6 +46,10 @@ Attempted in one jupyter notebook file
 
 https://github.com/jitendramishra1024/EVA5B2/blob/main/S7/SOLUTION_PART_01/CIFAR10_JITENDRA.ipynb
 
+COLAB LINK :
+
+https://colab.research.google.com/drive/1FdvbEVLdjn2U-CXfIG7wSoG36gjLvGj6?authuser=1
+
 **LOSS AND ACCURACY OF TRAIN AND TEST  :**
 
 <a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S7/Resources/TRAIN_TEST_ACC_LOSS.png" align="center" height="500" width="600" ></a>
