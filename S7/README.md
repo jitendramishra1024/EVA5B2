@@ -40,23 +40,28 @@ RECEPTIVE FIELD  :76
 
 **Link to the Code**
 
-https://github.com/jitendramishra1024/EVA5B2/blob/main/S5/ASSIGNMENT_CORRECT_SOLUTION/S5_Drill_01.ipynb
+ATTEMPT 01 :
+
+Attempted in one jupyter notebook file 
+
+https://github.com/jitendramishra1024/EVA5B2/blob/main/S7/SOLUTION_PART_01/CIFAR10_JITENDRA.ipynb
 
 **LOSS AND ACCURACY OF TRAIN AND TEST  :**
 
-<a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S5/ASSIGNMENT_CORRECT_SOLUTION/images/DRILL_01_IMG_99.4.png" align="center" height="500" width="600" ></a>
+<a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S7/Resources/TRAIN_TEST_ACC_LOSS.png" align="center" height="500" width="600" ></a>
 
 **PER CLASS ACCURACY :**
 
-<a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S5/ASSIGNMENT_CORRECT_SOLUTION/images/DRILL_01_IMG_99.4.png" align="center" height="500" width="600" ></a>
+<a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S7/Resources/PER_CLASS_ACCURACY.bmp" align="center" height="500" width="600" ></a>
 
-**RECEPTIVE FIELD  :**
+**RECEPTIVE FIELD IMAGE :**
 
-<a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S5/ASSIGNMENT_CORRECT_SOLUTION/images/DRILL_01_IMG_99.4.png" align="center" height="500" width="600" ></a>
+<a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S7/Resources/RF_CALCULATION.bmp" align="center" height="500" width="600" ></a>
 
 **MISCLASSIFIED IMAGE SAMPLE :**
 
-<a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S5/ASSIGNMENT_CORRECT_SOLUTION/images/DRILL_01_IMG_99.4.png" align="center" height="500" width="600" ></a>
+<a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S7/Resources/MISCLASSIFIED_IMAGE.png" align="center" height="500" width="600" ></a>
 
+**RECEPTIVE FIELD EXCEL SHEET :**
 
-
+https://github.com/jitendramishra1024/EVA5B2/blob/main/S7/Resources/RF_calculator_with_dialation_cifar_jitendra.xlsx
