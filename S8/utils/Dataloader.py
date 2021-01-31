@@ -1,17 +1,43 @@
 import torch
 import torchvision
 import torchvision.transforms as transforms
+import torchvision.transforms as transforms
+def calculate_mean_std(dataset):
+  loader = torch.utils.data.DataLoader(dataset,
+                          batch_size=128,
+                          num_workers=0,
+                          shuffle=False)
+
+  mean = 0.
+  std = 0.
+  for images, _ in loader:
+      batch_samples = images.size(0) # batch size (the last batch can have smaller size!)
+      images = images.view(batch_samples, images.size(1), -1)
+      mean += images.mean(2).sum(0)
+      std += images.std(2).sum(0)
+
+  mean /= len(loader.dataset)
+  std /= len(loader.dataset)
+  mean=mean.tolist()
+  std=std.tolist()
+  return mean,std 
+
+
 
 def train_test_loader(batch_size,num_workers):
+  trainset = torchvision.datasets.CIFAR10(root='./data',download=True,transform=transforms.ToTensor())
+  mean,std = calculate_mean_std(trainset)
+  # mean =[0.5,0.5,0.5]
+  # std =[0.5,0.5,0.5]
   train_transform = transforms.Compose(
   [transforms.ToTensor(),
    transforms.RandomCrop(32, padding=4),
    transforms.RandomHorizontalFlip(),
-  transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
+  transforms.Normalize(mean, std)
   ])
   test_transform = transforms.Compose(
   [transforms.ToTensor(),
-  transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
+  transforms.Normalize(mean, std)
   ])
 
 #   train_transform = transforms.Compose([
