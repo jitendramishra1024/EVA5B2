@@ -44,8 +44,8 @@ def get_misclassified(model, test_loader, device):
   
   
  
-def plot_misclassified(number,test_loader, device,model,classes):
-    image_data, predicted, actual = get_misclassified(model,test_loader,device)
+def plot_misclassified(number,test_loader, device,model,classes,mean,std,format ):
+    images, predicted, actual = get_misclassified(model,test_loader,device)
     nrows = math.floor(math.sqrt(number))
     ncols = math.ceil(math.sqrt(number))
 
@@ -57,4 +57,9 @@ def plot_misclassified(number,test_loader, device,model,classes):
             ax[i, j].axis("off")
             ax[i, j].set_title("Predicted: %s\nActual: %s" % (classes[predicted[index]], classes[actual[index]]))
             #FIRST UNNORMALIZE THEN SHOW 
-            ax[i, j].imshow(np.transpose(image_data[index].cpu().numpy()/ 2 + 0.5, (1, 2, 0)), cmap="gray_r")
+            mean = np.array(mean)
+            std = np.array(std)
+            if format=='raw':
+              ax[i, j].imshow(np.transpose(images[index].cpu().numpy(), (1, 2, 0))*std+mean, cmap="gray_r")
+            elif format=='normalized':
+              ax[i, j].imshow(np.transpose(images[index].cpu().numpy(), (1, 2, 0)), cmap="gray_r")
