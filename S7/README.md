@@ -42,13 +42,20 @@ RECEPTIVE FIELD  :76
 
 ATTEMPT 01 :
 
-Attempted in one jupyter notebook file 
+Attempted in jupyter notebook file 
 
 https://github.com/jitendramishra1024/EVA5B2/blob/main/S7/SOLUTION_PART_01/CIFAR10_JITENDRA.ipynb
 
 COLAB LINK :
 
 https://colab.research.google.com/drive/1FdvbEVLdjn2U-CXfIG7wSoG36gjLvGj6?authuser=1
+
+
+ATTEMPT 02 :
+
+Attempt after creating a package called SWAG_DNN .Same solution with neat code 
+
+https://github.com/jitendramishra1024/EVA5B2/blob/main/S7/SOLUTION_PART_02/CIFAR10_JITENDRA_OPTTIMIZED.ipynb
 
 **LOSS AND ACCURACY OF TRAIN AND TEST  :**
 
