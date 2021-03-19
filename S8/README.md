@@ -42,14 +42,14 @@ https://github.com/jitendramishra1024/EVA5B2/blob/main/S8/CIFAR10_JITENDRA_RESNE
 
 **LOSS AND ACCURACY OF TRAIN AND TEST  :**
 
-<a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/tree/main/S8/Resources/TRAIN_TEST_ACCURACY.PNG" align="center" height="500" width="600" ></a>
+<a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S8/Resources/TRAIN_TEST_ACCURACY.png" align="center" height="500" width="600" ></a>
 
 **PER CLASS ACCURACY :**
 
-<a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/tree/main/S8/Resources/PER_CLASS_ACCURACY.PNG" align="center" height="500" width="600" ></a>
+<a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S8/Resources/PER_CLASS_ACCURACY.PNG" align="center" height="500" width="600" ></a>
 
 **MISCLASSIFIED IMAGE SAMPLE :**
 
-<a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/tree/main/S8/Resources/MISCLASSIFIED.PNG" align="center" height="500" width="600" ></a>
+<a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S8/Resources/MISCLASSIFIED.PNG" align="center" height="500" width="600" ></a>
 
 
