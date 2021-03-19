@@ -2,7 +2,7 @@
 
 
 
-# S7
+# S8
 
 # CIFAR 10 with RESNET
 
