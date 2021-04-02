@@ -58,7 +58,7 @@ LESS OVERFITTING
 
 Attempted in jupyter notebook file 
 
-https://github.com/jitendramishra1024/EVA5B2/blob/main/S8/CIFAR10_JITENDRA_RESNET_CORRECT.ipynb
+https://github.com/jitendramishra1024/EVA5B2/blob/main/S9/CIFAR10_JITENDRA_RESNET_Albumentation.ipynb
 
 
 
