@@ -2,9 +2,9 @@
 
 
 
-# S8
+# S9
 
-# CIFAR 10 with RESNET
+# CIFAR 10 with RESNET With Albumentation and GRADCAM 
 
 **Target**
 
@@ -21,7 +21,7 @@ Train CIFAR 10 with below constraints
 
 **PARAMETER AND RECEPTIVE FIELD**
 
-PARAMETER :11,173,962(RESNET 18)
+PARAMETER :94,218 
 
 EPOCHS : 30
 
