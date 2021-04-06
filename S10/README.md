@@ -34,7 +34,7 @@ Albumentation used :
 			Totensor 
 			
 
-<a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S9/RESOURCES/TASK_SESSSION-9.PNG" align="center" height="500" width="600" ></a>
+<a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S10/RESOURCES/TASK_S10.PNG" align="center" height="500" width="600" ></a>
 
 
 **PARAMETER AND RECEPTIVE FIELD**
@@ -58,13 +58,13 @@ QUICK CONVERGENCE
 
 Attempted in jupyter notebook file 
 
-https://github.com/jitendramishra1024/EVA5B2/blob/main/S9/CIFAR10_JITENDRA_RESNET_Albumentation.ipynb
+https://github.com/jitendramishra1024/EVA5B2/blob/main/S10/CIFAR10_JITENDRA_LR_FINDER.ipynb
 
 
 
 **LOSS AND ACCURACY OF TRAIN AND TEST  :**
 
-<a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S9/RESOURCES/TRAIN_TEST_ACCURACY.png" align="center" height="500" width="600" ></a>
+<a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S10/RESOURCES/TRAIN_TEST_LOSS_ACC.png" align="center" height="500" width="600" ></a>
 
 **PER CLASS ACCURACY :**
 
@@ -72,24 +72,11 @@ https://github.com/jitendramishra1024/EVA5B2/blob/main/S9/CIFAR10_JITENDRA_RESNE
 
 **MISCLASSIFIED IMAGE SAMPLE :**
 
-<a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S9/RESOURCES/MISCALSSIFIED.PNG" align="center" height="500" width="600" ></a>
-
-**ALBUMENTATION  SAMPLE :**
-
-<a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S9/RESOURCES/ALBUMENTATION_SAMPLE.PNG" align="center" height="500" width="600" ></a>
-
-**GRADCAM OF USER PROVIDED IMAGE :**
-
-<a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S9/RESOURCES/GRADCAMOFUSERDEFINED.PNG" align="center" height="500" width="600" ></a>
-
-
-**GRADCAM OF USER PROPERLY CLASSIFIED  IMAGE :**
-
-<a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S9/RESOURCES/GRADCAMOFCLASSIFIED.PNG" align="center" height="500" width="600" ></a>
+<a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S10/RESOURCES/MISCLASSIFIED.PNG" align="center" height="500" width="600" ></a>
 
 **GRADCAM OF MISCALSSIFIED  IMAGE :**
 
-<a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S9/RESOURCES/GRADCAMOFMISCLASSIFIED.PNG" align="center" height="500" width="600" ></a>
+<a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S10/RESOURCES/MISCLASSIFIED_GRADCAM.PNG" align="center" height="500" width="600" ></a>
 
 
 
