@@ -12,10 +12,12 @@ Train CIFAR 10 with below constraints
 
 **CONSTRAINT**
 
+LR FINDER 
+REDUCE LR ON PLATEAU
 
 **CIFAR 10 RESNET CONSTRAINT  :**
 
-<a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S8/Resources/TASK.PNG" align="center" height="500" width="600" ></a>
+<a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S10/RESOURCES/TASK_S10.PNG" align="center" height="500" width="600" ></a>
 
 **ALBUMENTATION SAMPLE :**
 
@@ -34,7 +36,7 @@ Albumentation used :
 			Totensor 
 			
 
-<a href="url"><img src="https://github.com/jitendramishra1024/EVA5B2/blob/main/S10/RESOURCES/TASK_S10.PNG" align="center" height="500" width="600" ></a>
+
 
 
 **PARAMETER AND RECEPTIVE FIELD**
