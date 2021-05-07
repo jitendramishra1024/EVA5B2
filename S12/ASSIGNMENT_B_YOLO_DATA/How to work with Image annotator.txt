@@ -1,0 +1,24 @@
+1. Get VGG Image Annotator from https://www.robots.ox.ac.uk/~vgg/software/via/
+   in Downloads section  select via-2.0.11.zip
+   or we can work online aswell without downloading 
+   using https://www.robots.ox.ac.uk/~vgg/software/via/via_demo.html
+2. If Downloaded unzip and open via.html file in chrome 
+3. Add and remove files using Add Files or Remove 
+4. Add all files what we want to annotate 
+5. Go to Region attributes "class_name" and +
+   name :class_name
+   desc : name of the class 
+   type :dropdown 
+   
+   Add classes in 
+   id decription def section 
+   id :hardhat description HARDHAT
+   id :vest    description: VEST 
+6.After that go to first image in project section and select bounding box and assign class from dropdown 
+7.If you want to chnage the class of Bbox or we want to know which Bounding box 
+  corresponds to which class then click on Toggle Annotation Editor 
+8.Download json file Annotation->Expert Annotation as Json
+9. How to Visualize Json file in notepad++
+https://stackoverflow.com/questions/1560464/how-to-reformat-json-in-notepad#:~:text=Open%20notepad%2B%2B%20%2D%3E%20ALT%2B,%3E%20JSON%20Viewer%20%2D%3E%20Format%20JSON
+
+   
